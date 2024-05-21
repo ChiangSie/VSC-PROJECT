@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="fahrcalculator"></p>
+    <script>
+        //Celsius to fahrenheit calculator
+        function fahrCal(cels) {
+            let fahre = cels * (9/5) + 32;
+            return fahre;
+        }
+        document.getElementById("fahrcalculator").innerHTML = fahrCal(190);
+        //total seconds in current time in one day calculator
+        const date = new Date();
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
+        let seconds = date.getSeconds();
+        function secCal () {
+            return ( hours * 60 + minutes ) * 60 + seconds;  
+        };
+        console.log(hours);
+        document.write(secCal());
+
+    </script>
+</body>
+</html>

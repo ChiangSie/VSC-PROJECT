@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+<script>
+let today = new Date("2024-02-02");
+
+let yy = today.getFullYear();
+let mm = today.getMonth();
+let dd = today.getDate();
+document.write( `today : ${yy}年${mm+1}月${dd}日<br>`)
+
+let deadline = new Date(yy, mm, dd+28);
+document.write( `deadline : ${deadline.getFullYear()}年${deadline.getMonth()+1}月${deadline.getDate()}日<hr>`)
+
+
+document.write("today.toString() : ", today.toString(), "<br>");
+document.write("today.toDateString() : ",today.toDateString(), "<hr>");
+
+document.write("today.toLocaleString() : ", today.toLocaleString(), "<br>");
+document.write("today.toLocaleDateString(): ", today.toLocaleDateString(), "<br>");
+document.write("today.toLocaleTimeString() : ", today.toLocaleTimeString(), "<br>");
+document.write("today.getTime() : ", today.getTime(), "<br>");
+
+</script>	
+</body>
+</html>

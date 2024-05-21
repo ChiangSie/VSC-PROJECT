@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<style>
+		*{
+			margin: 0;
+		}
+		#topMessage{
+			background-color: #666;
+			color: #eee;
+			font: 20px Tahoma;
+			padding: 15px;
+			text-align: center;
+
+			display: none;
+		}
+		#topMessage:hover{
+			cursor: pointer;
+			background-color: #abc;
+			color: #888;
+		}
+	</style>
+	<script src="./js/jquery-3.7.1.js"></script>
+	<script>
+		$(function () {
+			// $('#topMessage').css('display','block')
+			$('#topMessage').slideDown(1500).click(function(){
+				// $(this).slideUp(1000)
+				$(this).slideUp(1000).delay(1000).slideDown(500)
+			})
+		})	
+	</script>
+</head>
+
+<body>
+	<div id="topMessage">
+		We see you're not logged in. Do you want to <a href="#">sign up</a>?
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .content{
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1/1;
+            background-color: aquamarine;
+            overflow: hidden;
+        }
+        .box01{
+            position: absolute;
+            z-index: 2;
+            top: 40%;
+            width: 20%;
+            left: 20%;
+            aspect-ratio: 1/1;
+            background-color: blueviolet;
+            opacity: 0;
+            margin: 0 100px 0 -100px;
+            transition: 2.5s;
+        }
+        .box01.active{
+            margin: 0;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="box01 scrolling50"></div>
+    </div>
+
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const Elements = document.querySelectorAll('.scrolling50');
+
+    function handleScroll() {
+        Elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (elementTop < windowHeight * 0.5) {
+                element.classList.add('active');
+            } else {
+                element.classList.remove('active');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', handleScroll);
+    });
+    </script>
+</body>
+</html>

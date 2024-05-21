@@ -1,0 +1,194 @@
+JavaScript                              jQuery
+---------------------------------------------------------------------------
+物件.innerHTML                          $(物件).html('<h1>Hello</h1>')
+物件.innerText                          $(物件).text('Hello')
+物件.textContent    
+--------------------------------------------------------------------------
+                                        $(物件).text('Hello')     // setter
+                                        let ans = $(物件).text()  // getter
+--------------------------------------------------------------------------
+img物件.width = 300                     $('img').attr('width', 300)
+img物件.style.width = '300px'           $('img').css('width', '300px')
+
+input物件.value                         $('input').attr('value')  XX
+                                        $('input').val()
+--------------------------------------------------------------------------
+關於陳述式和表達式
+    陳述式 (statement | 敘述)
+        continue;
+        break;
+        if(){}
+        while(){}
+
+    表達式 (expression | 條件判斷)
+        5 > 3
+        n
+        (x > y) ? x : y
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+HTML, CSS, JavaScript 如何讓 P 標籤的字變大?
+.html
+    <font size="+2">
+        <p>ABC</p>
+    </font>
+
+.css
+    p{
+        font-size: 20px;
+    }
+
+.js
+    p物件.style.fontSize = '20px'
+
+    img物件.width = 300
+    img物件.style.width = '300px'
+--------------------------------------------------------------------------
+撰寫程式的七個步驟
+1 確定目的
+2 規劃程式
+3 撰寫程式
+4 編譯 / 解析程式 -- 檢查語法是否正確
+5 執行程式
+6 測試跟除錯
+7 大型程式的保存
+--------------------------------------------------------------------------
+事件
+1 建立事件聆聽功能(包含一個物件 + 一個事件 + 一個處理函數)
+      .html   <button onclick="action()">click me</button>
+
+    √ .js 傳統的寫法     
+        button物件.onclick = action
+
+    √ .js W3C 的推薦寫法
+        button物件.addEventListener('click', action)
+
+2 事件分類
+  (1) 輸入裝置(滑鼠)
+        click           mousemove
+        mousedown       
+        mouseup         mouseover
+                        mouseout
+        dblclick
+        contextmenu     mouseenter
+                        mouseleave
+      
+  (2) 鍵盤
+        keypress
+        keydown
+        keyup
+
+  (3) 瀏覽器
+        load
+        unload
+        beforeunload
+
+        resize (window 專用的事件)
+        scroll
+
+  (4) 表單
+        submit
+        reset
+
+        focus
+        blur
+
+        change
+        select
+        input (jQuery 沒有這個事件)
+        search (jQuery 沒有這個事件)
+
+    theForm.onreset = function(){
+        return confirm(`Are you sure you want to reset the form?`)
+    }
+
+3 事件物件的屬性和方法
+    屬性: 
+        target
+        type
+
+        clientX | clientY
+        pageX | pageY
+
+    方法
+        preventDefault()    取消預設行為
+        stopPropagation()   停止冒泡事件
+
+4 引用事件物件
+    theButton.addEventListener('click', function(e){
+        在處理函數裡面，如果有使用任何一個事件物件的屬性或方法，
+        就要『引用事件物件』
+
+        console.log(e.target.nodeName)  // BUTTON   
+        console.log(e.type)             // click
+
+    })
+--------------------------------------------------------------------------
+DOM (Document Object Model)
+1 DOM 的屬性
+    (1) 描述彼此的關係
+        parentNode                      $().parent()
+        childNodes                      $().children()
+        firstChild                      $().first()
+        lastChild                       $().last()
+        previousSibling                 $().prev()  | $().prevAll()   |  $().siblings()
+        nextSibling                     $().next()  | $().nextAll()  
+
+    (2) 描述本身的資訊
+        nodeType
+        nodeValue
+        nodeName
+
+2 尋找物件
+    √ getElementById()
+      getElementsByName()
+      getElementsByTagName()
+      getElementsByClassName()
+
+    √ querySelector()
+    √ querySelectorAll()
+
+3 新增
+    (1) 先建標籤: document.createElement('標籤')
+        let image = document.createElement('img')
+
+        如果要建立文字節點: let theText = document.createTextNode('Does it make sense?')
+
+    (2) 將該標籤的屬性和方法先寫好
+        image.src = '路徑 + 檔名'
+        image.width = 300
+        image.style.width = '300px'
+
+        image.addEventListener('click', function(){})
+
+    (3) 找到爸爸，加進去
+        爸爸node.appendChild(image)                             $(爸爸node).append(子node)
+        爸爸node.insertBefore(image, 兄弟node)                  $(子node).appendTo(爸爸node)
+        爸爸node.insertBefore(image, 爸爸node.firstChild)
+
+4 刪除
+    爸爸node.removeChild(image)                                 $(爸爸node).remove(子node)
+
+5 修改
+    (1) 內容
+        innerHTML
+        innerText
+        textContent
+
+    (2) HTML 標籤的屬性
+        img物件.src
+        img物件.width
+        input物件.value
+
+        某物件.id = 'myId'  // setter
+        let ans = 某物件.id // getter
+
+        某物件.className
+        label物件.htmlFor = 'myLabel'
+
+    (3) CSS 的屬性
+        某物件.style.color
+        某物件.style.fontSize
+        某物件.style.transitionTimingFunction
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------

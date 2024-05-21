@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>15</h2>
+    <script>
+        var nums = [];
+        while(nums.length < 6){
+            var randomnum = parseInt((Math.random()*49)+1);
+            if(!nums.includes(randomnum)){
+                nums.push(randomnum);
+            }
+        }
+        document.write(nums);
+    </script>
+    <h2>16</h2>
+    <Script>
+        var arr = [['學號', '姓名', '電話', '地址'], ['94951001', '黃一丁', "0911000333", '中壢市大忠路一號'], ['94951002', '劉二毛', "0922999887", '高雄市中山路二號'], ['94951003', '張大化', "0933555779", '台北市師大路三號']]
+        var html = ""
+        html += "<table border='1'>"
+        for (var i = 0; i < arr.length; i++) {
+            html += "<tr>";
+            for (var j = 0; j < arr[i].length; j++) {
+                html += <td>${arr[i][j]}</td>
+            }
+            html += "</tr>";
+        } html += "</table>";
+        document.write(html);
+
+    </Script>
+    <h2>17</h2>
+    <Script>
+        function rand(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        document.write(rand(1, 20))
+    </Script>
+    
+    <h2>18</h2>
+    <script>
+        function rand(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        var x = 0
+        var x = rand(4, 7);
+        for (var i = 1; i <= x; i++) {
+            var number = rand(0, 9)
+            var color = "rgb(" + rand(0, 256) + ", " + rand(0, 256) + ", " + rand(0, 256) + ")";
+            var sum = "`<span style='color: " + color + "'>" + number + "</span>`";
+            document.write(sum)
+
+
+        }
+    </script>
+</body>
+</html>

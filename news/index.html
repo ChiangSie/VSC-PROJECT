@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="langauge.css">
+    <link rel="stylesheet" href="reset.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <script>
+        window.addEventListener('scroll', function() {
+        var navbar = document.getElementById('navbar');
+        var navfunction = document.getElementById('function-left');
+        var navfunction1 = document.getElementById('function-right');
+        var scrolled = window.scrollY > navbar.offsetTop;
+            if (scrolled) {
+                navbar.classList.add('scrolled');
+                navfunction.classList.add('scrolled');
+                navfunction1.classList.add('scrolled');
+            } 
+            else {
+                navbar.classList.remove('scrolled');
+                navfunction.classList.remove('scrolled');
+                navfunction1.classList.remove('scrolled');
+            };
+        });
+    </script>
+
+</head>
+<body>
+    <!-- 置頂欄(滑出banner區後消失) -->
+    <nav class="header" id="header">   
+        <div class="header-top-left">
+            <span>OPEN TIME : WED - SUN (9:00~20:00) | MON - TUE (CLOSE)</span>
+        </div>
+        <div class="header-top-right">
+            <span>FOLLOW US :  </span>
+            <a href="#">FACEBOOK</a>
+            <a href="#">|</a>
+            <a href="#">TWITTER X</a>
+            <a href="#">|</a>
+            <a href="#">INSTAGRAM</a>
+            <a href="#">|</a>
+            <a href="#">THREADS</a>
+        </div>
+    </nav>
+
+    <!-- nav欄 永遠定位於視窗最上方 -->
+    <nav class="navbar" id="navbar"> 
+        <div class="nav-logo">
+            <a href="">
+                <a href="./index.html"><img src="./png/LOGO.png"></a>
+            </a>
+        </div>
+        <div class="nav-function">
+            <div class="function-left" id="function-left">
+                <a href="#">ABOUT</a>
+                <a href="./events.html">EVENTS</a>
+                <a href="#">SHOP</a>
+                <a href="#">BLOG</a>
+            </div>
+            <div class="function-right" id="function-right">
+                <a href="#">BUY TICKET</a>
+            </div>
+        </div>
+    </nav>
+    
+
+
+    <!-- banner -->
+    <div class="container banner">
+        <span class="slogan">SEEKING ART IN THE OBSCURE</span>
+    </div>
+
+    <!-- 語言切換 -->
+    <div class="language">
+        <li>
+            <a href="">繁</a>
+        </li>
+        <li class="dash"></li>
+        <li>
+            <a href="">EN</a>
+        </li>
+        <li class="dash"></li>
+        <li>
+            <a href="">日</a>
+        </li>
+        <li class="dash"></li>
+        <li>
+            <a href="">한</a>
+        </li>
+    </div>
+
+    <!-- EVent -->
+    <div class="container events">
+        <div class="container-text">
+            <div class="titledash-ver"></div>
+            <div class="titledash-ver45deg"></div>
+            <div class="titledash-ver01"></div>
+            <h3>EVENTS</h3>
+            <h4>NIHILISM</h4>
+            <p>Nihilism challenges the essence of existence and meaning. It's not just emptiness; it's a profound abyss negating all purpose. Amid confusion and dread, it prompts reflection. Yet, it's liberating, freeing from absolutes. Facing it, we must guard against despair, seeking understanding. Does nihilism truly exist? Perhaps it's an extreme concept, hiding unseen order. Regardless, confronting it reveals personal truths. In this uncertain world, nihilism may be our ultimate reality, but it's through facing it that we find meaning.</p>
+        </div>
+        <div class="slider-box">
+            <div class="box">
+                <img src="./png/events01.png" alt="">
+                <h5>The Eyes</h5>
+            </div>
+            <div class="box">
+                <img src="./png/events02.jpg" alt="">
+                <h5>The Block</h5>
+            </div>
+            <div class="box">
+                <img src="./png/events03.png" alt="">
+                <h5>The Starry Sky</h5>
+            </div>
+            <div class="box">
+                <img src="./png/events04.jpg" alt="">
+                <h5>title</h5>
+            </div>
+            <div class="box">
+                <img src="./png/events05.jpg" alt="">
+                <h5>title</h5>
+            </div>
+        </div>
+        <button class="next" onclick="changeSlide(-1)"><ion-icon name="chevron-back-outline"></ion-icon></button>
+        <button class="prev" onclick="changeSlide(1)"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+    </div>
+
+    <div class="container blog">
+        <div class="container-text">
+            <div class="titledash-ver"></div>
+            <div class="titledash-ver45deg"></div>
+            <div class="titledash-ver01"></div>
+            <h3>BLOG</h3>
+            <div class="titledash-hoz1"></div>
+            <div class="titledash-hoz2"></div>
+        </div>
+        <div class="diamond-section">
+            <div class="diamond-area">
+                <div class="diamond">
+                    <a href="https://www.pinterest.com/pin/79446380921559488/" target="_blank">
+                        <img src="./png/blog01.jpg" alt="">
+                    </a>
+                </div>
+                <div class="diamond">
+                    <a href="https://www.pinterest.com/pin/57491332738225255/" target="_blank">
+                        <img src="./png/blog02.jpg" alt="">
+                    </a>
+                </div>
+                <div class="diamond">
+                    <a href="https://www.pinterest.com/pin/22658804366984775/" target="_blank">
+                        <img src="./png/blog03.jpg" alt="">
+                    </a>
+                </div>
+                <div class="diamond">
+                    <a href="https://www.pinterest.com/pin/9710955435042693/" target="_blank">
+                        <img src="./png/blog04.jpg" alt="">
+                    </a>
+                </div>
+                <div class="diamond">
+                    <a href="https://www.pinterest.com/pin/17803361021463307/" target="_blank">
+                        <img src="./png/blog05.jpg" alt="">
+                    </a>
+                </div>
+                <div class="diamond"></div>
+                <div class="diamond"></div>
+                <div class="diamond"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container about">
+        <div class="container-text">
+            <div class="titledash-ver"></div>
+            <div class="titledash-ver45deg"></div>
+            <div class="titledash-ver01"></div>
+            <h3>ABOUT</h3>
+            <div class="about-selction">
+                <h5>PHILOSOPHY</h5>
+                <h5>LOCATION</h5>
+                <h5>CONTACT US</h5>
+                <h5>WORK DATE</h5>
+            </div>
+            <div class="about-text">
+                <h3 class="dif">PHILOSOPHY</h3>
+                <p>On Earth, the small to medium-sized gallery and exhibition industry has matured considerably, yet it is difficult to find spaces of similar high standards on Mars, which the reason Obscure Gallery been created.  Although Obscure Gallery, born in 2020,  is built on a passion for art and respect for creators. We are committed to providing a platform for artists to showcase their work, while allowing viewers to interact deeply with the art.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-flex">
+            <div class="footer-link">
+                <span>LINK</span>
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="./events.html">EVENTS</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">SHOP</a></li>
+                </ul>
+                <span>SERVICE</span>
+                <ul>
+                    <li><a href="#">LOCATION</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="footer-sub-social">
+                <input type="email" class="subus" name="" id="" placeholder="Subscribe Us!">
+                <span>SOCIAL</span>
+                <ul>
+                    <li><a href="">FACEBOOK</a></li>
+                    <li><a href="">|</a></li>
+                    <li><a href="">INSTAGRAM</a></li>
+                    <li><a href="">|</a></li>
+                    <li><a href="">TWITTER-X</a></li>
+                    <li><a href="">|</a></li>
+                    <li><a href="">THREADS</a></li>
+                </ul>
+            </div>
+        </div>
+        <span><br>© 2024 Obscure Art Gallery All Right Reserve 學術練習用</span>
+    </footer>
+
+
+
+</body>
+</html>

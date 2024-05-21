@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <style>
+        .theLabel{
+            text-transform: capitalize;
+            float: left;
+            width: 90px;
+        }
+    </style>
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){            
+            // $('label').css('text-transform','capitalize').css().css()...
+            // $('label').css({
+            //     textTransform: 'capitalize',
+            //     float: 'left',
+            //     width: '90px',
+            // })
+            $('label').addClass('theLabel')
+
+        })
+    </script>
+</head>
+<body>
+    <p>
+        <label for="name">name: </label>
+        <input type="text" id="name">
+    </p>
+    <p>
+        <label for="email">email: </label>
+        <input type="email" id="email" placeholder="Your email...">
+    </p>
+    <p>
+        <label for="talk">comments: </label>
+        <textarea id="talk"></textarea>
+    </p>
+    <input type="submit" value="click me">
+    <input type="submit" value="click us">
+</body>
+</html>

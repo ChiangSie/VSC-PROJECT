@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keyword" content="HTML,CSS,Javascript">
+<title>Examples</title>
+<style>
+	h2 {
+		color:deeppink;
+	}
+</style>
+</head>
+
+<body>
+<h2>没有參數也没有傳回值</h2>
+
+<script>
+	function sayHello () {
+		document.write("Hello");
+	}
+	sayHello();
+</script>
+
+
+<h2>有參數, 没有傳回值</h2>
+<script>
+	function sayHelloToSommeOne (someone) {//someone為區域變數，無法被外面取得
+		document.write(`Hello ${someone},您好~`)
+	}
+	sayHelloToSommeOne ("Peter");
+</script>
+
+
+<h2>有參數, 有傳回值</h2>
+<script>
+	function sum (a ,b ) {
+		let total = a + b;
+		return total;
+	};
+	document.write(`10 + 20 = ${sum(10,20)}`);
+
+
+</script>
+
+<h2>arguments</h2>
+<script>
+function sum(a, b){  
+	var total = 0;  
+	//改寫下段程式
+	for(let i= 0;i< arguments.length; i++) {
+		total = total +arguments[i];
+	}
+	return total;
+}	
+
+document.write("10 + 20 =", sum( 10, 20), "<br>"); 
+document.write("10 + 20 + 30 =", sum( 10, 20, 30), "<br>");
+</script>
+
+
+<h2>參數給預設值</h2>
+<script>
+function rand(min,max) {
+	var gap = max - min ;
+	let num =( Math.round(parseFloat(Math.random())* gap)  ) + 60; 
+	return num;
+}
+document.write(rand(60,100))
+</script>
+
+<!-- 
+/"<h2>避免和全域方法同名</h2>
+<script>
+// window.alert("test...........1");
+// alert("test...........2");		
+</script>
+
+<h2>rest parameter</h2> 
+<script>
+function sumMany(){
+	let sum = 0;
+	
+	return sum;
+}
+
+document.write("sumMany(11,22,33) : ", sumMany(11,22,33), "<br>");
+document.write("sumMany(10,20,30,40,50) : ", sumMany(10,20,30,40,50), "<br>");
+</script>
+ -->
+
+</body>
+</html>

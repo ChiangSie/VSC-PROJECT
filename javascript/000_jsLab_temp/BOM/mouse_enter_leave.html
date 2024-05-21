@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<style>
+#outer{
+	background-color:darkgreen;
+	width:100%;
+}
+#inner{
+	background-color: blueviolet;
+	width:100%;
+
+}
+</style>
+</head>
+
+<body>
+
+<div id="outer">
+	outer <br>
+	outer <br>
+	outer <br>
+	<div id="inner">
+		inner <br>
+		inner <br>
+		inner <br>
+	</div>
+	outer <br>
+	outer <br>
+	outer <br>
+</div>
+
+<script>
+	/*
+inner.onmouseover = function() {
+	console.log("inner mouse_over");
+}
+inner.onmouseout = function() {
+	console.log("inner mouse_out");
+}
+
+outer.onmouseover = function() {
+	console.log("outer mouse_over");
+}
+outer.onmouseout = function() {
+	console.log("outer mouse_out");
+}
+*/
+
+//------------------------
+
+inner.onmouseenter = function() {
+	console.log("inner mouse_enter");
+}
+inner.onmouseleave = function() {
+	console.log("inner mouse_leave");
+}
+
+outer.onmouseenter = function() {
+	console.log("outer mouse_enter");
+}
+
+outer.onmouseleave = function() {
+	console.log("outer mouse_leave");
+}
+
+</script>
+
+
+</script> 
+
+</body>
+</html>

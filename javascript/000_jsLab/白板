@@ -1,0 +1,56 @@
+25503605226
+
+程式語言===>機器語言
+
+寫在哪裡?
+  1.<script>
+
+  </script>
+
+  2.<script src="lib.js"></script>
+
+  3.<a href...
+
+資料型別: string, number, boolean, undefined, null
+
+宣告變數: var,let
+var : 
+let : 
+
+宣告常數 const PI = 3.14
+
+運算式(operator, operand, 種類, 優先序)
+
+結構化程式設計
+  1.循序
+  2.選擇(if, switch)
+  3.重覆(for, while, do..while)
+
+  巢狀迴圈
+
+陣列
+  一維陣列
+      var arr = new Array(11, 22, 33);
+      var arr = [11, 22, 33]
+  二維陣列
+
+  n維陣列
+
+  ...練習自己寫程式完成一些功能
+  ...使用現成的函式完成一些功能
+
+函式(參數, 回傳值)
+  function funcName(......) {
+    return 值
+  }
+
+  區域, 全域
+
+  function sum(a, b, ...arr)
+
+  事件, 事件處理器
+
+  設定事件處理器的方式
+
+  案例 : setFavorite, sameAsBuyer
+  

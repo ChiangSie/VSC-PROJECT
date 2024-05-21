@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            aspect-ratio: 1/5;
+            padding-top: 1000px;
+        }
+        .box {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        text-align: center;
+        line-height: 200px;
+        font-size: 20px;
+        transition: transform 0.5s ease;
+        }
+
+        .aos-active {
+        background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box aos">
+        Scroll down to see the effect!
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const aosElements = document.querySelectorAll('.aos');
+
+    function handleScroll() {
+        aosElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (elementTop < windowHeight * 0.6) {
+                element.classList.add('aos-active');
+            } else {
+                element.classList.remove('aos-active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS</title>
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="langauge.css">
+    <link rel="stylesheet" href="reset.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <script>
+        window.addEventListener('scroll', function() {
+        var navbar = document.getElementById('navbar');
+        var navfunction = document.getElementById('function-left');
+        var navfunction1 = document.getElementById('function-right');
+        var scrolled = window.scrollY > navbar.offsetTop;
+            if (scrolled) {
+                navbar.classList.add('scrolled');
+                navfunction.classList.add('scrolled');
+                navfunction1.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+                navfunction.classList.remove('scrolled');
+                navfunction1.classList.remove('scrolled');
+            };
+        });
+    </script>
+
+</head>
+<body>
+
+    <!-- 置頂欄(滑出banner區後消失) -->
+    <nav class="header" id="header">   
+        <div class="header-top-left">
+            <span>OPEN TIME : WED - SUN (9:00~20:00) | MON - TUE (CLOSE)</span>
+        </div>
+        <div class="header-top-right">
+            <span>FOLLOW US :  </span>
+            <a href="#">FACEBOOK</a>
+            <a href="#">|</a>
+            <a href="#">TWITTER X</a>
+            <a href="#">|</a>
+            <a href="#">INSTAGRAM</a>
+            <a href="#">|</a>
+            <a href="#">THREADS</a>
+        </div>
+    </nav>
+
+
+    <!-- nav欄 永遠定位於視窗最上方 -->
+    <nav class="navbar" id="navbar"> 
+        <div class="nav-logo">
+            <a href="">
+                <a href="./index.html"><img src="./png/LOGO.png"></a>
+            </a>
+        </div>
+        <div class="nav-function">
+            <div class="function-left" id="function-left">
+                <a href="#">ABOUT</a>
+                <a href="./events.html">EVENTS</a>
+                <a href="#">SHOP</a>
+                <a href="#">BLOG</a>
+            </div>
+            <div class="function-right" id="function-right">
+                <a href="#">BUY TICKET</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 語言切換 -->
+    <div class="language">
+        <li>
+            <a href="">繁</a>
+        </li>
+        <li class="dash"></li>
+        <li>
+            <a href="">EN</a>
+        </li>
+        <li class="dash"></li>
+        <li>
+            <a href="">日</a>
+        </li>
+        <li class="dash"></li>
+        <li>
+            <a href="">한</a>
+        </li>
+    </div>
+
+    <div class="page-title">
+        <h2>EVENTS</h2>
+    </div>
+
+    <div class="container">
+        <div class="event-pic">
+            <img src="./png/events01.png" alt="">
+        </div>
+        <div class="event-text">
+            <h4>Eyes</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt eligendi incidunt repudiandae soluta rem repellat5 quo totam voluptatibus perferendis ullam odit hic impedit molestias consequuntur eveniet, 2temporibus quidem et necessitatibus?</p>
+            <a href="#"><h5>VIEW MORE <ion-icon name="arrow-forward-outline"></ion-icon></h5></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="event-pic">
+            <img src="./png/events02.jpg" alt="">
+        </div>
+        <div class="event-text">
+            <h4>Block</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt eligendi incidunt repudiandae soluta rem repellat quo totam voluptatibus perferendis ullam odit hic impedit molestias consequuntur eveniet, temporibus quidem et necessitatibus?</p>
+            <a href="#"><h5>VIEW MORE <ion-icon name="arrow-forward-outline"></ion-icon></h5></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="event-pic">
+            <img src="./png/events03.png" alt="">
+        </div>
+        <div class="event-text">
+            <h4>Starry Sky</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt eligendi incidunt repudiandae soluta rem repella2t quo totam voluptatibus perferendis ullam odit hic impedit molestias consequuntur eveniet, temporibus quidem et necessitatibus?</p>
+            <a href="#"><h5>VIEW MORE <ion-icon name="arrow-forward-outline"></ion-icon></h5></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="event-pic">
+            <img src="./png/events04.jpg" alt="">
+        </div>
+        <div class="event-text">
+            <h4>Geo</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt eligendi incidunt repudiandae soluta rem repellat quo totam voluptatibus perferendis ullam odit hic impedit molestias consequuntur eveniet, temporibus quidem et necessitatibus?</p>
+            <a href="#"><h5>VIEW MORE <ion-icon name="arrow-forward-outline"></ion-icon></h5></a>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="footer-flex">
+            <div class="footer-link">
+                <span>LINK</span>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">EVENTS</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">SHOP</a></li>
+                </ul>
+                <span>SERVICE</span>
+                <ul>
+                    <li><a href="#">LOCATION</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="footer-sub-social">
+                <input type="email" class="subus" name="" id="" placeholder="Subscribe!">
+                <span>SOCIAL</span>
+                <ul>
+                    <li><a href="">FACEBOOK</a></li>
+                    <li><a href="">|</a></li>
+                    <li><a href="">INSTAGRAM</a></li>
+                    <li><a href="">|</a></li>
+                    <li><a href="">TWITTER-X</a></li>
+                    <li><a href="">|</a></li>
+                    <li><a href="">THREADS</a></li>
+                </ul>
+            </div>
+        </div>
+        <span><br>© 2024 Obscure Art Gallery All Right Reserve 學術練習用</span>
+    </footer>
+
+</body>
+
+</html>

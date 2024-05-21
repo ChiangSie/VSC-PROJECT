@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+</head>
+
+<body>
+帳號 <input type="text" id="memId"><br>
+
+<script type="text/javascript">
+
+
+function memId_keydown(e){
+  console.log("down key: ", e.key );  //實體鍵
+  console.log("down code: ", e.code ); //代碼
+}
+
+function memId_keyup(e){
+  console.log("up key: ", e.key );
+  console.log("up code: ", e.code );
+}
+
+function memId_keypress(e){
+  console.log("press key: ", e.key );
+  console.log("press code: ", e.code );
+}
+
+function init(){
+	document.getElementById("memId").onkeydown = memId_keydown;
+	document.getElementById("memId").onkeyup = memId_keyup;
+	document.getElementById("memId").onkeypress = memId_keypress;
+}
+window.addEventListener("load", init, false);
+</script>    
+</body>
+</html>

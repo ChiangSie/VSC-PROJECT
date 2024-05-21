@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>document</title>
+</head>
+
+<body>
+<div>首頁 >> <span id="curPos">=====</span></div>
+<br><br>
+
+搜尋<input type="text" name="searchData" style=""><input type="button" value="查詢"><br>
+搜尋<input type="text" name="searchData" style=""><input type="button" value="查詢"><br>
+
+<div id="price">
+    價格 : <span style="display:none">600</span>
+</div>
+<script type="text/javascript">
+//-----------------------------案例一, 透過id來找到元素    
+//找到頁面中的元素 curPos
+var curPos = document.getElementById("curPos");//currentPosition
+
+//改變curPos元素的內容
+// curPos.innerText = "<b>商品熱賣區</b>"; //bold
+curPos.innerHTML = "<b>商品熱賣區</b>"; //bold
+
+//改變curPos元素的外觀
+curPos.style.color = "deeppink";
+curPos.style.borderBottom = "dotted";
+
+//-----------------------------案例二, 透過name來找到元素   
+//找到頁面中的元素 searchData
+var objects = document.getElementsByName("searchData");
+
+//改變searchData元素的內容
+objects[0].value="Pen" ;
+objects[1].placeholder="請輸入關鍵字" ;
+
+//改變searchData元素的外觀
+objects[0].style.borderColor = "deeppink";
+objects[1].style.borderColor = "deeppink";
+// objects.style.borderColor = "deeppink"; //error, objects集合没有style屬性
+
+document.write("<hr>");
+let price = document.getElementById("price");
+document.write("price.innerText : ", price.innerText, "<br>");
+document.write("price.textContent : ", price.textContent, "<br>");
+</script>    
+</body>
+</html>

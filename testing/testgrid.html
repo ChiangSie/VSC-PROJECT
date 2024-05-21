@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* body單純把東西放中間，這不重要 */
+        body{
+            width: 100%;
+            margin-bottom: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2{
+            margin: 50px 0 30px 0;
+        }
+
+
+        .grid-group{
+            width: 30%;  
+            /* 父層(body)的30% */
+
+            aspect-ratio: 3/4;
+            /* 長寬比例3:004 */
+
+            background-color: red;
+
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(3,1fr);
+            /* 直橫行 4*3   */
+
+            gap: 10%;
+            /* 父層(grip-group)的10%  */
+
+        }
+        .box{
+            background-color: yellow;
+        }
+
+
+        .grid-group1{
+            width: 30%;
+            /* 父層(body)的30% */
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(3,1fr);
+            background-color: blue;
+            gap: 10%;
+        }
+        
+        .box1{
+            width: 100%;
+            aspect-ratio: 1/1;
+            background-color: green;
+        }
+
+        .grid-group2{
+            width: 30%;
+            aspect-ratio: 1/1;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(3,1fr);
+            background-color: aquamarine;
+            gap: 10%;
+            grid-auto-flow: row;
+        }
+        .box2{
+            width: 100%;
+            aspect-ratio: 1/1;
+            background-color: orange;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>1</h2>
+    <div class="grid-group">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+    </div>
+
+    <h2>2</h2>
+    <div class="grid-group1">
+        <div class="box1">1</div>
+        <div class="box1">2</div>
+        <div class="box1">3</div>
+        <div class="box1">4</div>
+        <div class="box1">5</div>
+        <div class="box1">6</div>
+        <div class="box1">7</div>
+        <div class="box1">8</div>
+        <div class="box1">9</div>
+    </div>
+
+    <h2>3</h2>
+    <div class="grid-group2">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+        <div class="box2">4</div>
+        <div class="box2">5</div>
+        <div class="box2">6</div>
+        <div class="box2">7</div>
+        <div class="box2">8</div>
+    </div>
+</body>
+</html>

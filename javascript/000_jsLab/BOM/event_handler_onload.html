@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>event handler</title>
+
+</head>
+
+<body>
+
+<input type="button" name="btn" value="10+20=?[0]" onclick="showAns();">&nbsp;&nbsp;
+<input type="button" name="btn" value="10+20=?[1]">&nbsp;&nbsp;
+<input type="button" name="btn" value="10+20=?[2]">&nbsp;&nbsp;  
+<script>
+    function showAns() {
+        var a=10; 
+        var b=20; 
+        window.alert(a+b)
+    }
+    
+    function showSmile() {
+        alert("^________________^");
+        btns[2].removeEventListener("click", showSmile, false);
+    }
+      
+    let btns;
+    function init() {
+        btns = document.getElementsByName("btn");
+        btns[1].onclick = showAns; //
+        btns[1].onclick = showSmile; //最後只有showSmile處理器
+        
+        btns[2].addEventListener("click", showAns, false);
+        btns[2].addEventListener("click", showSmile, false);        
+    }
+
+    // window.onload = init;
+    window.addEventListener("load", init, false);
+    </script> 
+</body>
+</html>

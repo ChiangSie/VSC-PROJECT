@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obscure Art Gallery</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index_rwd.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            var navbar = document.getElementById('navbar');
+            var scrolled = window.scrollY > navbar.offsetTop;
+            if (scrolled) {
+                navbar.classList.add('scrolled');
+            } 
+            else {
+                navbar.classList.remove('scrolled');
+            };
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 置頂欄(滑出banner區後消失) -->
+    <nav class="header">
+        <div class="header-top-left">
+            <span>OPEN TIME : WED - SUN (9:00~20:00) | MON - TUE (CLOSE)</span>
+        </div>
+        <div class="header-top-right">
+            <span>FOLLOW US : </span>
+            <a href="#">FACEBOOK</a>
+            <a href="#">|</a>
+            <a href="#">TWITTER X</a>
+            <a href="#">|</a>
+            <a href="#">INSTAGRAM</a>
+            <a href="#">|</a>
+            <a href="#">THREADS</a>
+        </div>
+    </nav>
+
+    <!-- nav欄 永遠定位於視窗最上方 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">
+            <a href="index_rwd.html">
+                <img src="./png/LOGO.png" alt="LOGO">
+            </a>
+        </div>
+
+        <div class="menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-function">
+            <ul class="nav-menu">
+                <li>
+                    <a href="#">ABOUT</a>
+                </li>
+                <li>
+                    <a href="#">EVENTS</a>
+                </li>
+                <li>
+                    <a href="#">SHOP</a>
+                </li>
+                <li>
+                    <a href="#">BLOG</a>
+                </li>
+                <li>
+                    <a href="#">BUY <ion-icon name="ticket-outline"></ion-icon></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- banner -->
+    <div class="container banner">
+        <h1>SEEKING ART IN THE OBSCURE</h1>
+    </div>
+
+
+
+    <!-- about -->
+    <div class="container about">
+        <h2>ABOUT</h2>
+        <div class="about-right">
+            <p>On Earth, the small to medium-sized gallery and exhibition industry has matured considerably, yet it is difficult to find spaces of similar high standards on Mars, which the reason
+            Obscure Gallery been created. Although Obscure Gallery, born in 2020, is built on a passion for art and
+                respect for creators. We are committed to providing a platform for artists to showcase their work, while
+                allowing viewers to interact deeply with the art.
+            </p>
+        </div>
+    </div>
+    <script>
+
+    </script>
+
+
+
+    <!-- events -->
+    <div class="container events">
+        <div class="slider">
+            <div class="slider-box slider-box__bg01">
+                <div class="slider-article">
+                    <h3>NIHILISM</h3>
+                    <p>Nihilism may be our ultimate reality.</p>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="slider-box  slider-box__bg02">
+                <div class="slider-article">
+                    <h3>THE EYES</h3>
+                    <p>EYES AND SOUL</p>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="slider-box  slider-box__bg03">
+                <div class="slider-article">
+                    <h3>THE BLOCK</h3>
+                    <p>ccc</p>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="slider-box  slider-box__bg04">
+                <div class="slider-article">
+                    <h3>THE STARRY SKY</h3>
+                    <p>ddd</p>
+                    <button>See More</button>
+                </div>
+            </div>
+        </div>
+        <div class="slider-ctrl">
+            <button class="prev"><ion-icon name="arrow-back-outline"></ion-icon></button>
+            <button class="next"><ion-icon name="arrow-forward-outline"></ion-icon></button>
+        </div>
+    </div>
+
+    <script>
+        let next = document.querySelector('.next')
+        let prev = document.querySelector('.prev')
+
+        next.addEventListener('click', function () {
+            let items = document.querySelectorAll('.slider-box')
+            document.querySelector('.slider').appendChild(items[0])
+        })
+
+        prev.addEventListener('click', function () {
+            let items = document.querySelectorAll('.slider-box')
+            document.querySelector('.slider').prepend(items[items.length - 1])
+        })
+    </script>
+
+
+
+    <!-- blog -->
+    <div class="container blog">
+        <h2>BLOG</h2>
+        <div class="diamond-area">
+
+            <div class="diamond">
+                <a href="#" target="_blank">
+                    <img src="" alt="">
+                </a>
+            </div>
+
+            <div class="diamond">
+                <a href="#" target="_blank">
+                    <img src="" alt="">
+                </a>
+            </div>
+
+            <div class="diamond">
+                <a href="#" target="_blank">
+                    <img src="" alt="">
+                </a>
+            </div>
+
+            <div class="diamond">
+                <a href="#" target="_blank">
+                    <img src="" alt="">
+                </a>
+            </div>
+
+            <div class="diamond">
+                <a href="#" target="_blank">
+                    <img src="" alt="">
+                </a>
+            </div>
+
+            <div class="diamond">
+                <a href="#" target="_blank">
+                    <img src="" alt="">
+                </a>
+            </div>
+
+            <div class="diamond">
+                <a href="#" target="_blank">
+                    <img src="" alt="">
+                </a>
+            </div>
+
+            <div class="diamond">
+                <a href="#" target="_blank">
+                    <img src="" alt="">
+                </a>
+            </div>
+
+            <div class="diamond">
+                <a href="#" target="_blank">
+                    <img src="" alt="">
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="footer-link">
+            <h4>GALLERY INFO</h4>
+            <ul>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">EVENTS</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">BUY TICKET</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <ul>
+                <li><a href="#">FACEBOOK</a></li>
+                <li><a href="#">TWITTERX</a></li>
+                <li><a href="#">INSTAGRAM</a></li>
+                <li><a href="#">THREADS</a></li>
+            </ul>
+        </div>
+        <div class="footer-time">
+            <h4>TIME / CONTACT</h4>
+            <ul>
+                <li>WED - SUN (9:00~20:00)</li>
+                <li>MON - TUE (CLOSE)</li>
+                <li>781-562-9355, 781-727-6090</li>
+            </ul>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

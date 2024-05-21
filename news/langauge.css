@@ -1,0 +1,26 @@
+.language{
+    background-color:transparent;
+    backdrop-filter:blur(8px); 
+    -webkit-backdrop-filter:blur(8px);
+    opacity:(0.3);
+    position: fixed;
+    top: 40vh;
+    left: 0px;
+    z-index: 10;
+}
+.language a{
+    display: flex;
+    justify-content: center;
+    width: 25px;
+    font-size: 15px;
+    color: #F6E8EA;
+
+    padding: 15px 0px 15px 0px;
+}
+.dash{
+    /* display: flex;
+    justify-content: center; */
+    background-color:#F6E8EA;
+    width: 25px;
+    height: 2px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>event handler</title>
+</head>
+
+<body>
+
+<input type="button" name="btn" value="10+20=?[0]" onclick="showans()">&nbsp;&nbsp;
+<input type="button" name="btn" value="10+20=?[1]">&nbsp;&nbsp;
+<input type="button" name="btn" value="10+20=?[2]">&nbsp;&nbsp;  
+
+<script>
+    function showans(){
+        var a = 10; 
+        var b = 20;
+        window.alert(a + b);
+    }
+
+    function showsmile(){
+        alert("^_____^");
+    }
+
+    let btns = document.getElementsByName('btn');
+    btns[1].onclick = showans;
+    btns[1].onclick = showsmile;
+
+    btns[2].addEventListener("mouseover",showans);
+    btns[2].addEventListener("mouseover",showsmile);
+</script> 
+</body>
+</html>

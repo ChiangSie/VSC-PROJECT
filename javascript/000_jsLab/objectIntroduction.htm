@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Object 簡介</title>
+<style>
+  h2 { color:deepPink}
+</style>
+</head>
+
+<body>	  			 
+<h2> new Object()</h2>
+<script>  
+// function apply(money){  
+//     if( money <= 10000){
+// 		document.write("申請費用", money , ", 通過<br>") ;
+//     }else{
+//     	document.write("申請費用", money , ", 超過10000元，不通過<br>") ;
+//     }
+// }
+
+var emp; //使用Object類別來建立物件
+document.write("代號 : " , emp.empno , "<br>");
+document.write("姓名 : " , emp.ename , "<br>");
+emp.apply(6000);
+</script>
+
+<h2>Object literals</h2>
+<script> 	
+var emp2; 
+emp2 = {};
+emp2 = {
+  empno : 7002,
+  ename : "alice",
+  apply : apply
+}
+
+</script>
+
+<h2>Object literals------2</h2>
+<script> 
+//ES6提供簡化的字面值撰寫方法(short notation)。	
+let empno = "7003";
+let ename = "Ann";	
+var emp3 = {
+  empno,
+  ename,
+  apply : function(money){
+    document.write("凍結經費申請")
+  }
+};
+document.write("代碼 : " , emp3.empno , "<br>");
+document.write("姓名 : " , emp3.ename , "<br>");
+emp3.apply(600);
+</script>
+
+<h2> new 建構函式名稱()</h2>
+<script> 	
+function Employee(empno, ename){
+  this.empno = empno;
+  this.ename = ename;
+  this.weight = 0;
+  this.getData = function(){
+    return`[empno : ${this.empno},ename : ${this.ename},weiht : ${this.weight}]`;
+  }
+  this.eat = function(weight){
+    this.weight += weight;
+  }
+}
+var dog = new Employee(99999, "Snoopy");
+// var emp = new Object();
+// Employee.call(emp, 9999, "King");
+document.write("dog.empno : ", dog.empno, "<br>");
+document.write("dog.ename : ", dog.ename, "<br>");
+document.write(dog.getData(), "<hr>");
+dog.eat(100);
+document.write(dog.getData(), "<hr>");
+
+var cat = new Employee(88888, "Kitty");
+document.write("cat.empno : ", cat.empno, "<br>");
+document.write("cat.ename : ", cat.ename, "<br>");
+document.write(cat.getData(), "<hr>");
+cat.eat(1000);
+document.write(cat.getData(), "<hr>");
+
+
+
+// document.write("window.empno : ", window.empno, "<br>");
+// document.write("window.ename : ", window.ename, "<br>");
+// Employee("1001", "Snoopy"); //當作一般函式來呼叫時, 其內的this參考到window
+// document.write("window.empno : ", window.empno, "<br>");
+// document.write("window.ename : ", window.ename, "<br>");
+
+// var cat ={};
+// Employee.call(cat,1002,"kitty");
+
+// document.write("cat.empno :",cat.empno,"<br>");
+// document.write("cat.ename :",cat.ename,"<br>");
+
+</script>
+
+</body>
+</html>

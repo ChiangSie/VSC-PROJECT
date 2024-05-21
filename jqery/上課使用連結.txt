@@ -1,0 +1,38 @@
+§ 雲端硬碟
+    https://drive.google.com/drive/folders/1XdRWM1XOiv6yVe8W7BxtZZabcrSyOHBJ?usp=drive_link
+
+§ 付費 + 免費圖庫
+    圖庫 
+    https://www.freepik.com/
+    https://pixabay.com/
+    https://unsplash.com/
+    https://www.pexels.com/zh-tw/ 免費商用
+
+    SVG / png 圖像
+    https://undraw.co/ 免費商用
+    https://storyset.com/
+
+    假圖
+    https://fakeimg.pl/
+
+    icon
+    https://icons8.com/
+    https://fontawesome.com/
+    https://www.flaticon.com/
+
+§ 顏色選擇
+    https://color.adobe.com/zh/
+    https://coolors.co/
+
+§ jQuery easing
+    https://easings.net/
+
+§ jQuery innerHeight
+    https://powerkaifu.github.io/2020/10/07/lesson-jq-04.geometry/
+
+§ JSON
+    Validator
+    https://jsonformatter.curiousconcept.com/
+
+    Viewer
+    https://jsoneditoronline.org/

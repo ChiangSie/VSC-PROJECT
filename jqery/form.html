@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+    <form id="theForm">
+        name: <input type="text" name="name"> <br>
+        age: <input type="number" name="age"> <br>
+
+        <input type="submit" value="傳送">
+        <button>也會傳送</button>
+        <input type="image" src="../images/workplace.jpg">
+    </form>
+
+    <script>
+        let theForm = document.querySelector('#theForm')
+        console.log(theForm.nodeName);
+
+        theForm.onsubmit = function(e){
+            // 事件物件.preventDefault()
+            e.preventDefault()
+        }
+    </script>
+</body>
+</html>
