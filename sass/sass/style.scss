@@ -1,0 +1,105 @@
+/*css註解*/
+// css import
+// @import url();
+// sass import
+
+//引用內建函式
+@use 'sass:math';
+
+// base 變數
+@import 'base/var';
+@import 'base/color';
+@import 'base/font';
+
+// mixin function
+@import 'mixin/mixin';
+
+// component 組件
+@import 'component/btn';
+@import 'component/card';
+@import 'component/form';
+@import 'component/table';
+
+// layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/login';
+@import 'layout/body';
+
+//page 頁面
+@import 'page/index';
+@import 'page/about';
+
+// 套件 
+// @import  'plugin/xxx'
+@import 'plugins/grid';
+
+
+
+
+$d : 300;
+$d : 150 !default;
+
+.spacing-1 {
+    left: $d
+}
+
+
+// content的用法
+@mixin a() {
+    width: 100px;
+
+    span {
+        @content;
+    }
+}
+
+.a {
+    @include a() {
+        height: 100px;
+    }
+}
+
+//運算子
+.cal {
+    width: 10 + 10px;
+    height: 100 - 10em;
+    max-width: 10 * 10;
+    //   font: (100 / 10) + px;
+    //除法
+    font: math.div(100, 10) + px;
+}
+
+//顏色內建函式
+.dark {
+    background-color: darken(#fff, 100);
+}
+
+.light {
+    background-color: lighten(#000, 100);
+}
+
+//  數字運算函式
+.number {
+    font-size: ceil(100.4px);
+    font-size: round(100.5px);
+    font-size: floor(100.4px);
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #95ff00;
+
+
+}
+
+// push
+@include push(left, 100);
+@include push(top, 100);
+
+// each loop
+$img :slider1 slider2 slider3; //list
+
+@include img(a1 a2 a3); // list
+@include color($color);

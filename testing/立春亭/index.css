@@ -29,6 +29,11 @@
 .mb-menu{
     display: none;
 }
+@media screen and (min-width:768px){
+    .mb{
+        display: none;
+    }
+}
 
 
 
@@ -40,25 +45,120 @@
 }
 .banner-img{
     width: 100%;
+    aspect-ratio: 1/0.8;
 }
 .banner-img img{
     width: 100%;
+    aspect-ratio: 1/0.8;
+    object-fit: cover;
+    object-position: 50% 50%;
     vertical-align: middle;
 }
 .banner-section h1{
     position: absolute;
     z-index: 2;
-    top: 67.5%;
+    top: 75%;
     right: 0;
     color: white;
-    font-size: 4.5vw;
-    letter-spacing: 2.5vw;
+    font-size: 18px;
+    letter-spacing: 10px;
+}
+
+@media screen and (min-width:768px){
+    .banner-img{
+        width: 100%;
+        aspect-ratio: 2.5/0.8;
+    }
+    .banner-img img{
+        aspect-ratio: 2.5/0.8;
+    }
+    .banner-section h1{
+        font-size: 24px;
+        letter-spacing: 20px;
+    }
 }
 
 
 
 /*  關於我們 */
 .about{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-image: url(./img/dust-bgpic.png);
+}
+.wave-bg{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(300px,70%,1200px);
+    aspect-ratio: 1.1/1;
+    transition: 2s;
+    background-image: url(./img/aboutUs_bcg.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    text-align: center;
+}
+.wave-bg .span1{
+    position: absolute;
+    writing-mode: vertical-lr;
+    font-size: 16px;
+    letter-spacing: 8px;
+    color: red;
+    top: 10%;
+    left: 25%;
+}
+.wave-bg .span1 span{
+    writing-mode: vertical-lr;
+    color: black;
+    top: 10%;
+    left: 25%;
+}
+.about-txt{
+    display: flex;
+    flex-direction: column;
+}
+.about-txt h2{
+    font-size: 24px;
+    line-height: 60px;
+    margin-bottom: 5%;
+}
+.about-txt p{
+    font-size: 12px;
+    line-height: 30px;
+    letter-spacing: 3px;
+}
+
+/* .about-pic-01{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 40%;
+    aspect-ratio: 1/1.75;
+    transform: translate(-50%,-50%);
+}
+.about-pic-01 img{
+    width: 100%;
+    aspect-ratio: 1/1.75;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+.about-pic-02{
+    display: none;
+} */
+
+@media screen and (min-width:768px){
+
+}
+
+
+
+
+
+/* .about{
     position: relative;
     z-index: 1;
     width: 100%;
@@ -72,8 +172,7 @@
     right: 0;
     width: 63%;
     aspect-ratio: 1/1.75;
-    background-color: antiquewhite;  /* 後續把顏色拿掉，放背景圖 */
-    /* background-image: url(); */
+    background-color: antiquewhite;
 }
 .red-ellipse-bg{
     position: absolute;
@@ -133,5 +232,5 @@
 }
 .about-img02{
     display: none;
-}
+} */
 
